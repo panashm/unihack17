@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from app.models import *
 
 def index(request):
     return render(request, 'index.html', {})
@@ -22,10 +23,12 @@ def badge(request, badge_id):
 
 
 def organisation(request, organisation_id):
-    return render(request, 'index.html', {})
+    org = Organisation.objects.get(pk=organisation_id)
+    return render(request, 'organisation.html', {'organisation' : org})
 
 def business(request, business_id):
-    return render(request, 'index.html', {})
+    bus = Business.objects.get(pk=business_id)
+    return render(request, 'business.html', {'business' : bus})
 
 
 def login(request):

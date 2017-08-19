@@ -15,6 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 from app import views
 
 urlpatterns = [
@@ -31,7 +35,7 @@ urlpatterns = [
     url(r'^badge/([0-9]+)/$', views.badge, name='badge'),
 
     url(r'^organisation/([0-9]+)/$', views.organisation, name='organisation'),
-    url(r'^business/([0-9]+)$', views.business, name='business'),
+    url(r'^business/([0-9]+)/$', views.business, name='business'),
 
     url(r'^admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
