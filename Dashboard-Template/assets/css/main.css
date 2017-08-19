@@ -2209,6 +2209,7 @@
 				font-size: 17pt;
 			}
 
+
 		/* Header */
 
 			#header {
@@ -2225,6 +2226,7 @@
 
 			#main {
 				margin-left: 300px;
+				font-size: 11pt;
 			}
 
 	}
