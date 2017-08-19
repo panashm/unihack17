@@ -83,7 +83,6 @@ svg.append("g")
   .attr("transform", "translate(0," + height + ")")
   .call(xAxis)
 
-
 // Begintijd toevoegen op de bars
 svg.selectAll('.bar')
   .append("text")
