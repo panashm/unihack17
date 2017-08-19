@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 class Organisation(models.Model):
     user = models.OneToOneField(User)
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=100, default='')
+    description = models.TextField(max_length=500, default='')
     website = models.URLField(default='')
     phone = models.IntegerField(default=0)
     image = models.ImageField(upload_to='profile_image', blank=True)
@@ -21,6 +21,9 @@ class Organisation(models.Model):
 class Badge(models.Model):
     name = models.CharField(max_length=50)
     organisation = models.ForeignKey(Organisation)
+    image = models.ImageField(upload_to='badge_image', blank=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    description = models.TextField(max_length=500, default='')
 
     def __str__(self):
         return "{}: {}".format(self.organisation.name, self.name)
@@ -32,6 +35,15 @@ class Consumer(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class BadgeClaim(models.Model):
+    timestamp = models.DateTimeField(auto_now_add=True)
+    consumer = models.ForeignKey(Consumer)
+    badge = models.ForeignKey(Badge)
+
+    def __str__(self):
+        return "{} - {}: {}".format(self.timestamp, self.consumer.user.username, self.badge.name)
+
 
 class Business(models.Model):
     user = models.OneToOneField(User)

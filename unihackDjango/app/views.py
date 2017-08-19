@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from app.models import *
 
 from django.contrib.auth import authenticate, login
@@ -17,24 +17,26 @@ def index(request):
 def dashboard(request):
     return render(request, 'index.html', {})
 
-@login_required
 def discover(request):
     return render(request, 'index.html', {})
 
-@login_required
 def discoverQuery(request, search_string):
     return render(request, 'index.html', {})
 
-@login_required
 def badge(request, badge_id):
-    return render(request, 'index.html', {})
+    bad = get_object_or_404(Badge, pk=badge_id)
+    issues = BadgeClaim.objects.filter(badge=bad).count()
+    supporting_businesses = Business.objects.filter(badge=bad)
+    return render(request, 'badge.html',
+        {"badge" : bad,
+        "issues" : issues,
+    "businesses" : supporting_businesses}
+    )
 
-@login_required
 def organisation(request, organisation_id):
-    org = Organisation.objects.get(pk=organisation_id)
+    org = get_object_or_404(Organisation, pk=organisation_id)
     return render(request, 'organisation.html', {'organisation' : org})
 
-@login_required
 def business(request, business_id):
     bus = Business.objects.get(pk=business_id)
     return render(request, 'business.html', {'business' : bus})
@@ -51,6 +53,7 @@ def login(request, next_page='login'):
     else:
         return render(request, 'login.html', {})
 
+@login_required
 def logout(request):
     return redirect('login')
 
