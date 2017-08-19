@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="random description">
+    <meta name="author" content="CharitySync">
+    <meta name="keywords" content="Charity Sync">
+    <meta name="language" content="en">
+    <meta name="robots" content="index, follow">
+    <title>Charity Sync {% block titlecontent %}{% endblock %}</title>
+    <!-- For iPhone 4 Retina display: -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/favicons/apple-touch-icon-114x114-precomposed.png"> -->
+    <!-- For iPad: -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/favicons/apple-touch-icon-72x72-precomposed.png"> -->
+    <!-- For iPhone: -->
+    <!-- <link rel="apple-touch-icon-precomposed" href="/assets/images/favicons/apple-touch-icon-60x60-precomposed.png"> -->
+    <!--<link rel="stylesheet" href="/assets/css/lato-font.css" type="text/css">-->
+    <link rel="dns-prefetch" href="//maps.gstatic.com">
+    <link rel="dns-prefetch" href="//maps.googleapis.com">
+
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css">
+
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
