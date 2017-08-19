@@ -1,9 +1,30 @@
-{% if organisation %}
-    <h2>{{ organisation.name }}</h2>
-    <p>{{ organisation.description }}</p>
-    <p>website url: <a href="{{ organisation.website }}">{{ organisation.website }}</a></p>
-    <p>contact: {{ organisation.phone }}</p>
-    <img src="{{ organisation.image.url }}" width="240">
-{% else %}
-    This organisation does not exist.
-{% endif %}
+
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+	<!--
+User dash Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+		<div class="outerCard col-md-9">
+            <div class="dash-content">
+                <br/>
+                {% if organisation %}
+                    <h3>{{ organisation.name }}</h3>
+                    <p>{{ organisation.description }}</p>
+                    <p>website url: <a href="{{ organisation.website }}">{{ organisation.website }}</a></p>
+                    <p>contact: {{ organisation.phone }}</p>
+                    <img src="{{ organisation.image.url }}" width="240">
+                {% else %}
+                    This organisation does not exist.
+                {% endif %}
+
+                </div>
+            <br/>
+		</div>
+        
+{% endblock %}
