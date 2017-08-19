@@ -15,14 +15,14 @@ var x = d3.scale.ordinal()
   }))
   .rangeRoundBands([0, width], 0.2);
 
-// y schaal definiëren
+// y schaal definiëren 
 var y = d3.scale.linear()
   .domain([0, d3.max(data, function(d) {
     return d.Slaapuren;
   })])
   .range([height, 0]);
 
-// y schaal definiëren
+// y schaal definiëren 
 var xAxis = d3.svg.axis()
   .scale(x)
   .orient("bottom");
@@ -45,7 +45,7 @@ svg.selectAll("rect")
   .attr("class", "bar")
   .append("rect")
   .attr("class", function(d) {
-
+    
     if (d.Slaapeffi > 0.9) {
       return "sleep-good";
     } else if (d.Slaapeffi <= 0.8) {
@@ -76,7 +76,7 @@ svg.append("g")
   .attr("y", -margin.bottom)
   .attr("dy", ".71em")
   .style("text-anchor", "end")
-  .text("Amount of Contributions");
+  .text("Aantal uren slaap");
 // labels van de X as
 svg.append("g")
   .attr("class", "x axis")
@@ -99,8 +99,21 @@ svg.selectAll('.bar')
     return d.Beginslapen
   });
 
+// Eindtijd toevoegen op de bars
+svg.selectAll('.bar')
+  .append("text")
+  .attr("x", function(d) {
+    return x(d.Datum)
+  })
+  .attr("y", height)
+  .attr("fill", 'white')
+  .attr("class", "end-time")
+  .attr("transform", "translate(10,-12)")
+  .text(function(d) {
+    return d.Eindslapen
+  });
 
-// Animation
+// Greensock animatie
 var tl = new TimelineMax;
 
 tl.staggerFrom(('.bar'), 0.25, {

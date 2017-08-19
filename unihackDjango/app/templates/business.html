@@ -1,15 +1,36 @@
-{% if business %}
-    <img src="{{ business.coverPhoto.url }}" width="840">
-    <img src="{{ business.profileImage.url }}" width="240">
-    <h2>{{ business.name }}</h2>
-    <p>{{ business.description }}</p>
-    <p>website url: <a href="{{ business.website }}">{{ business.website }}</a></p>
 
-    <p>contact: {{ business.phone }}</p>
-    <p>Address: {{ business.address }}</p>
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Businesses{% endblock %}
+{% block content %}
 
-    <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ business.lat }},{{ business.lng }}&amp;key=AIzaSyCpcYY5QyVgTJ5c1OgP5S9mtYXxAi07boI"></iframe>
-    <iframe width="100%" height="450" frameborder="0" style="border:0" src="http://maps.google.com/maps?q={{ business.lat }},{{ business.lng }}&z=15&output=embed"></iframe>
-{% else %}
-    This business does not exist.
-{% endif %}
+	<!--
+User dash Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+		<div class="outerCard col-md-9">
+            <div class="dash-content">
+                {% if business %}
+                <div class="backBusiness" style="background-image: url('{% static "images/walrusBack.jpeg" %}')">
+
+                    <img class="profileBusiness" src="{{ business.profileImage.url }}" width="240"></div>
+                    <h3>{{ business.name }}</h3>
+
+                    <p>{{ business.description }}</p>
+                    <p>website url: <a href="{{ business.website }}">{{ business.website }}</a></p>
+
+                    <p>contact: {{ business.phone }}</p>
+                    <p>Address: {{ business.address }}</p>
+                    <br/>
+                    <iframe width="100%" height="450" frameborder="0" style="border:0" src="http://maps.google.com/maps?q={{ business.lat }},{{ business.lng }}&z=15&output=embed"></iframe>
+                {% else %}
+                    This business does not exist.
+                {% endif %}
+                <br/>
+
+            </div>
+            <br/>
+		</div>
+
+{% endblock %}

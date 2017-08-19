@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+	<!--
+User dash Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+		<div class="outerCard col-md-9">
+            <div class="dash-content">
+                <br/>
+                {% if badge %}
+                    <h3>{{ badge.name }}</h3>
+                    <img src="{{ badge.image.url }}" width="100">
+
+                    <p>Issued by <a href="/organisation/{{ badge.organisation.id }}/">{{ badge.organisation.name }}</a></p>
+                    <p>Created on {{ badge.date_created }}</p>
+                    <p>n. badges issued = {{ issues }}</p>
+                    <p>{{ badge.description }}</p>
+                    <h3>List of Businesses that support this badge</h3>
+                    <ul>
+                        {% for business in businesses %}
+                            <img src="{{ business.profileImage.url }}" width="100">
+                            <p><a href="/business/{{ business.id }}/">{{ business.name }}</a></p>
+
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    This badge does not exist.
+                {% endif %}
+
+                </div>
+            <br/>
+		</div>
+
+{% endblock %}

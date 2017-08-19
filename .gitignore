@@ -9,4 +9,4 @@ env
 *.pyc
 __pycache__
 db_repository/
-/app/migrations/
+unihackDjango/app/migrations/

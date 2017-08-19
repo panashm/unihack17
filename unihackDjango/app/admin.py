@@ -9,6 +9,7 @@ admin.site.register(Consumer)
 admin.site.register(Organisation)
 admin.site.register(Business)
 admin.site.register(Badge)
+admin.site.register(BadgeClaim)
 
 
 # Register your models here.
