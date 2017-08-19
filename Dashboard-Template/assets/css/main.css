@@ -13,8 +13,6 @@
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 100%;
-		font: inherit;
 		vertical-align: baseline;
 	}
 
@@ -56,7 +54,7 @@
 		box-sizing: border-box;
 	}
 
-/* Containers
+/* Containers*/
 
 	.container {
 		margin-left: auto;
@@ -214,8 +212,8 @@
 		}
 
 	}
-*/
-/* Grid
+
+/* Grid*/
 
 	.row {
 		border-bottom: solid 1px transparent;
@@ -902,7 +900,13 @@
 		}
 
 	}
-
+	.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+	}
 	@media screen and (min-width: 961px) and (max-width: 1320px) {
 
 		.row > * {
@@ -1547,13 +1551,12 @@
 		}
 
 	}
-*/
+
 /* Basic */
 
 	body {
 		background: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
 		color: #888;
@@ -1572,7 +1575,6 @@
 
 	input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
 		color: #888;
@@ -1997,7 +1999,9 @@
 		text-align: right;
 		top: 0;
 		width: 375px;
+		font-size: 22px;
 	}
+	
 
 		#header .top {
 			-moz-flex-grow: 1;
@@ -2206,7 +2210,6 @@
 		/* Basic */
 
 			body, input, textarea, select {
-				font-size: 17pt;
 			}
 
 
@@ -2226,7 +2229,7 @@
 
 			#main {
 				margin-left: 300px;
-				font-size: 11pt;
+
 			}
 
 	}
@@ -2254,7 +2257,7 @@
 		/* Basic */
 
 			body, input, textarea, select {
-				font-size: 16pt;
+				font-size: 20pt;
 			}
 
 			.container {
@@ -2512,7 +2515,7 @@
 		/* Basic */
 
 			body, input, textarea, select {
-				font-size: 14pt;
+
 			}
 
 			h2 {
