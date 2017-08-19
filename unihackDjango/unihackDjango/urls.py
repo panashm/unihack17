@@ -20,13 +20,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from app import views
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^dashboard/$', views.dashboard, name='dashboard'),
-
-    url(r'^login/$', views.login, name='login'),
     url(r'^logout/$', views.logout, name='logout'),
+    url(r'^accounts/logout/$', views.logout, name='logout'),
+
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^register/$', views.register, name='register'),
 
     url(r'^discover/$', views.discover, name='discover'),

@@ -14,10 +14,8 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
 
 <body>
@@ -36,19 +34,7 @@
 
 			<!-- Nav -->
 			<nav id="nav">
-				<!--
 
-								Prologue's nav expects links in one of two formats:
-
-								1. Hash link (scrolls to a different section within the page)
-
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
-
-								2. Standard link (sends the user to another page/site)
-
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-
-							-->
 				<ul>
 					<!--<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li> -->
 					<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Dashboard</span></a></li>
@@ -77,149 +63,69 @@
 
 	<!-- Main -->
 	<div id="main">
-
 		<!-- Intro -->
 		<section id="top" class="one dark cover">
+			<div class="container">
+				<h2> Main Dashboard</h2>
+
+				<div class="row equal">
+					<div class="col-md-6 col-sm-3">
+						<h4>Recently Completed Tasks</h4>
+						<div class="alert alert-success alert-dismissable">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							<strong>Success!</strong> Indicates a successful or positive action.
+						</div>
+						<div class="alert alert-success alert-dismissable">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							<strong>Success!</strong> Indicates a successful or positive action.
+						</div>
+						<div class="chart-wrapper"></div>
+					</div>
+
+					<div class="col-md-6 col-sm-3">
+						content
+					</div>
+
+				</div>
+				<div class="row equal">
+
+					<div class="col-md-6 col-sm-3">
+						Content
 
 
-			<div class="flex-grid">
-				<div class="col">asdasd</div>
-				<div class="col">asdasd</div>
+					</div>
+
+					<div class="col-md-6 col-sm-3">
+						content
+					</div>
+					<div class="container">
+						<h1 class="title">Completed Tasks for the Month</h1>
+						<div class="legend">
+							<div class="blue bloq">Slaapefficiëntie boven 90%</div>
+							<div class="purple bloq">Slaapefficiëntie tussen 90% en 80%</div>
+							<div class="red bloq">Slaapefficiëntie onder 80%</div>
+						</div>
+						<div class="graph"></div>
+
+					</div>
+
+				</div>
+
 			</div>
-			<div class="flex-grid">
-				<div class="col">asdasd</div>
-				<div class="col">asdasd</div>
-			</div>
-			<header>
+	</div>
+	<header>
 
 
-			</header>
+	</header>
 
-			<footer>
-				<!--	<a href="#portfolio" class="button scrolly">Magna Aliquam</a> -->
-				<br>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			</footer>
+	<footer>
+		<!--	<a href="#portfolio" class="button scrolly">Magna Aliquam</a> -->
+
+	</footer>
 
 	</div>
 	</section>
 
-	<!-- Portfolio
-		<section id="portfolio" class="two">
-			<div class="container">
-
-				<header>
-					<h2>Portfolio</h2>
-				</header>
-
-				<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis fusce hendrerit lacus
-					ridiculus.
-				</p>
-
-				<div class="row">
-					<div class="4u 12u$(mobile)">
-						<article class="item">
-							<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3>Ipsum Feugiat</h3>
-							</header>
-						</article>
-						<article class="item">
-							<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-							<header>
-								<h3>Rhoncus Semper</h3>
-							</header>
-						</article>
-					</div>
-					<div class="4u 12u$(mobile)">
-						<article class="item">
-							<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-							<header>
-								<h3>Magna Nullam</h3>
-							</header>
-						</article>
-						<article class="item">
-							<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-							<header>
-								<h3>Natoque Vitae</h3>
-							</header>
-						</article>
-					</div>
-					<div class="4u$ 12u$(mobile)">
-						<article class="item">
-							<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-							<header>
-								<h3>Dolor Penatibus</h3>
-							</header>
-						</article>
-						<article class="item">
-							<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-							<header>
-								<h3>Orci Convallis</h3>
-							</header>
-						</article>
-					</div>
-				</div>
-
-			</div>
-		</section>
-				-->
-	<!-- About Me
-		<section id="about" class="three">
-			<div class="container">
-
-				<header>
-					<h2>About Me</h2>
-				</header>
-
-				<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-				<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem parturient nulla quam placerat
-					viverra mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec ornare iaculis.</p>
-
-			</div>
-		</section>
--->
-	<!-- Contact
-		<section id="contact" class="four">
-			<div class="container">
-
-				<header>
-					<h2>Contact</h2>
-				</header>
-
-				<p>Elementum sem parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc orci ridiculus faucibus a consectetur. Porttitor curae
-					mauris urna mi dolor.</p>
-
-				<form method="post" action="#">
-					<div class="row">
-						<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
-						<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
-						<div class="12u$">
-							<textarea name="message" placeholder="Message"></textarea>
-						</div>
-						<div class="12u$">
-							<input type="submit" value="Send Message" />
-						</div>
-					</div>
-				</form>
-
-			</div>
-		</section>
-
-	</div>
--->
-	<!-- Footer
-		<div id="footer">
--->
-	<!-- Copyright
-			<ul class="copyright">
-				<li>&copy; Untitled. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-
-		</div>
--->
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -230,6 +136,12 @@
 	<script src="assets/js/main.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+	<script src="assets/js/index.js"></script>
+	<script src='assets/js/xmjykx.js'></script>
+	<script src="assets/js/index.js"></script>
+
 
 
 </body>
