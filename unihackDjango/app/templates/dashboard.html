@@ -13,26 +13,19 @@ Licensed under MIT
             <div class="dash-content">
                 <h3>Current Tokens</h3>
                 <br/>
+				{% for badge in badges %}
                 <table class="tokenCard table borderless">
-
                   <tbody>
                     <tr>
-                      <th class="badgeInfo" scope="row">1:badge pic</th>
-                      <td>Random charity</td>
+                      <th class="badgeInfo" scope="row"><a href="/badge/{{ badge.id }}"><img src="{{ badge.image.url }}" width="50"></a></div>
+                      </th>
+                      <td>{{ badge.name }}</td>
+					  <br>
+					   <td>{{ badge.organisation }}</td>
                     </tr>
-                      
                   </tbody>
                 </table>
-                <table class="tokenCard table borderless">
-
-                  <tbody>
-                    <tr>
-                      <th class="badgeInfo" scope="row">1:badge pic</th>
-                      <td>Random charity</td>
-                    </tr>
-                      
-                  </tbody>
-                </table>
+				{% endfor %}
 			   Some user related content goes here...
             </div>
             <br/>
@@ -67,5 +60,5 @@ Licensed under MIT
     <script src="{% static 'js/xmjykx.js' %}"></script>
     <script src="{% static 'js/donut.js' %}"></script>
 		</div>
-        
+
 {% endblock %}
