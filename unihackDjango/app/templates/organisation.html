@@ -1,0 +1,9 @@
+{% if organisation %}
+    <h2>{{ organisation.name }}</h2>
+    <p>{{ organisation.description }}</p>
+    <p>website url: <a href="{{ organisation.website }}">{{ organisation.website }}</a></p>
+    <p>contact: {{ organisation.phone }}</p>
+    <img src="{{ organisation.image.url }}" width="240">
+{% else %}
+    This organisation does not exist.
+{% endif %}

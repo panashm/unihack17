@@ -15,14 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 from app import views
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^dashboard/$', views.dashboard, name='dashboard'),
-
-    url(r'^login/$', views.login, name='login'),
     url(r'^logout/$', views.logout, name='logout'),
+    url(r'^accounts/logout/$', views.logout, name='logout'),
+
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^register/$', views.register, name='register'),
 
     url(r'^discover/$', views.discover, name='discover'),
@@ -31,7 +39,7 @@ urlpatterns = [
     url(r'^badge/([0-9]+)/$', views.badge, name='badge'),
 
     url(r'^organisation/([0-9]+)/$', views.organisation, name='organisation'),
-    url(r'^business/([0-9]+)$', views.business, name='business'),
+    url(r'^business/([0-9]+)/$', views.business, name='business'),
 
     url(r'^admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

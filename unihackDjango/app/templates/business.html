@@ -1,0 +1,15 @@
+{% if business %}
+    <img src="{{ business.coverPhoto.url }}" width="840">
+    <img src="{{ business.profileImage.url }}" width="240">
+    <h2>{{ business.name }}</h2>
+    <p>{{ business.description }}</p>
+    <p>website url: <a href="{{ business.website }}">{{ business.website }}</a></p>
+
+    <p>contact: {{ business.phone }}</p>
+    <p>Address: {{ business.address }}</p>
+
+    <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ business.lat }},{{ business.lng }}&amp;key=AIzaSyCpcYY5QyVgTJ5c1OgP5S9mtYXxAi07boI"></iframe>
+    <iframe width="100%" height="450" frameborder="0" style="border:0" src="http://maps.google.com/maps?q={{ business.lat }},{{ business.lng }}&z=15&output=embed"></iframe>
+{% else %}
+    This business does not exist.
+{% endif %}

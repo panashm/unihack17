@@ -2,9 +2,11 @@
 *.DS_Store
 app.db
 *.db
+*.sqlite3
 env/
 env
 *.DS_Store
 *.pyc
 __pycache__
 db_repository/
+/app/migrations/
