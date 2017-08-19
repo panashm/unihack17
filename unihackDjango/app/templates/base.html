@@ -43,8 +43,8 @@
 
                   <tbody>
                     <tr>
-                      <th class="badgeInfo" scope="row"><img class="logoMain" width="50px" height="50px" src="{% static 'images/mainLogo.png' %}" alt="Pic"></th>
-                      <td class="titleInner"><h2 class="mainTitle">CharitySync</h2></td>
+                      <th class="titleInner" scope="row"><h2 class="mainTitle">CharitySync</h2></th>
+                      <td class="badgeInfo"><img class="logoMain" width="50px" height="50px" src="{% static 'images/mainLogo.png' %}" alt="Pic"></td>
                     </tr>
                       
                   </tbody>
@@ -72,28 +72,28 @@
 					<ul class="nav">
 						<li class="">
 							<a href="{% url 'dashboard' %}">
-							<i class="glyphicon glyphicon-home"></i>
-							Overview </a>
+							<i class="padSide glyphicon glyphicon-home"></i>
+							Overview </a><p></p>
 						</li>
 						<li>
 							<a href="{% url 'discover' %}">
-							<i class="glyphicon glyphicon-search"></i>
-							Discover</a>
+							<i class="padSide glyphicon glyphicon-search"></i>
+							Discover</a><p></p>
 						</li>
 						<li>
 							<a href="{% url 'businesses' %}">
-							<i class="glyphicon glyphicon-tree-deciduous"></i>
-				            Businesses </a>
+							<i class="padSide glyphicon glyphicon-tree-deciduous"></i>
+				            Businesses </a><p></p>
 						</li>
                         <li>
 							<a href="{% url 'about' %}">
-							<i class="glyphicon glyphicon-question-sign"></i>
-				            About </a>
+							<i class="padSide glyphicon glyphicon-question-sign"></i>
+				            About </a><p></p>
 						</li>
 						<li>
 							<a href="{% url 'logout' %}">
-							<i class="glyphicon glyphicon-off"></i>
-							Log out </a>
+							<i class="padSide glyphicon glyphicon-off"></i>
+							Log out </a><p></p>
 						</li>
 					</ul>
 				</div>
@@ -112,6 +112,7 @@
         <p class="bottomText"> Unihack 2017 &copy; CharitySync 2017</p>
      </div>
 </footer>
+    
 </body>
 
 </html>

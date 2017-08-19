@@ -9,12 +9,16 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 
 
-@login_required
 def index(request):
     return render(request, 'index.html', {})
 
 @login_required
 def dashboard(request):
+    #isConsumer = Consumer.objects.filter(user=user).count()
+    #if isConsumer > 0:
+        
+    
+    #BadgeClaim.objects.filter(consumer=)
     return render(request, 'dashboard.html', {})
 
 def discover(request):

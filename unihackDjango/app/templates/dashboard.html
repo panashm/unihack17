@@ -36,11 +36,36 @@ Licensed under MIT
 			   Some user related content goes here...
             </div>
             <br/>
-            <div class="dash-content">
+            <div class="graph2 dash-content">
                 <h3>Tokens attained over past Month</h3>
 
                 <p>Graph Goes here</p>
+                <div class="graph2 container">
+  <h1 class="title">Sven's Slaapoverzicht</h1>
+    <div class="legend">
+    <div class="blue bloq">Slaapefficiëntie boven 90%</div>
+    <div class="purple bloq">Slaapefficiëntie tussen 90% en 80%</div>
+    <div class="red bloq">Slaapefficiëntie onder 80%</div>
+  </div>
+  <div class="graph"></div>
+</div>
             </div>
+            <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollzer.min.js' %}"></script>
+    <script src="{% static 'js/skel.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="{% static '/js/main.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.5/Chart.min.js'></script>
+    <script src="https://codepen.io/Vordez/pen/XmjYKx.js"></script>
+    <script src="{% static 'js/xmjykx.js' %}"></script>
+    <script src="{% static 'js/donut.js' %}"></script>
 		</div>
         
 {% endblock %}
