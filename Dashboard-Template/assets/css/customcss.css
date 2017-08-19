@@ -33,6 +33,7 @@
 
 /* Containers */
 
+
 /* Grid*/
 
 	.row {
@@ -526,7 +527,26 @@
      font-size: 1em;
      margin-bottom: 2.5em;
    }
-	#chart {
-	  height: 200px;
-	  width: 200px;
-	}
+   .legend {
+     text-align: center;
+     font-size: 0.85em;
+     letter-spacing: 0.02em;
+     margin-bottom: 40px;
+   }
+   .legend .bloq {
+     display: inline-block;
+     padding: 8px 20px;
+     padding-bottom: 10px;
+   }
+   .legend .bloq + .bloq {
+     margin-left: 4px;
+   }
+   .legend .blue {
+     background-color: #2de4e3;
+   }
+   .legend .purple {
+     background-color: #6f5df6;
+   }
+   .legend .red {
+     background-color: #ff666f;
+   }
