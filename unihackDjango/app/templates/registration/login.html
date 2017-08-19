@@ -1,4 +1,6 @@
 {% load staticfiles %}
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,14 +30,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <link rel="stylesheet" href="{% static 'css/custom1.css' %}" type="text/css">
-
-</head>
-<body>
-    <div class="overallBack">
-    <div class="row dash">
-		<section id="banner">
-            <div class="card">
-  <table class="titleBack table borderless">
+    </head>
+    <body class="loginBody" style=" background-image: url('{% static "images/backgroundLogin.jpg" %}')">
+            <div class="longerDiv">
+                <div class="loginForm center">
+                
+                <form class="form form-signin" method="post" action="{% url 'login' %}" style="text-align: center;">
+                <table class="titleBack table borderless">
 
                   <tbody>
                     <tr>
@@ -43,76 +44,47 @@
                       <td class="badgeInfo"><img class="logoMain" width="50px" height="50px" src="{% static 'images/mainLogo.png' %}" alt="Pic"></td>
                     </tr>
                       
+                      
                   </tbody>
                 </table>
-  <div class="container">
-    <h4><b>John Doe</b></h4> 
-    <p>Architect & Engineer</p> 
-  </div>
-</div>
-			<div class="inner">
-				<h2>Charity Sync</h2>
-                <form method="post" action="{% url 'login' %}">
-                {% csrf_token %}
-                    {{ form.username }}
-                    {{ form.password }}
-				<ul class="actions">
-					<li><button type="submit" class="button special">Login</button></li>
-				</ul>
+                                        {% csrf_token %}
+
+                    <div class="">
+                    <div class="form-group">
+                      <div class="col-xs-8">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username"/> <br/>
+
+                      </div>
+                    </div>
+                      <br/><br/>
+                    <div class="form-group">
+                      <div class="col-xs-8">          
+                        <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password"/>
+                      </div>
+                    </div>
+                    <br/><br/><br/>
+                    <div class="form-group">        
+                      <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary">Log in</button>
+                      </div>
+                    </div>
+                </div>
+
                     <input type="hidden" name="next" value="{{ next }}" />
-
-                <ul class="actions">
-					<li><a href="#" class="button special">Register</a></li>
-				</ul>
+                    <br/>
+                    <br/>
                 </form>
-			</div>
-		</section>
-
-
-
-		<!-- Footer
-		<footer id="footer">
-
-			<ul class="icons">
-				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Untitled</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-
-		</footer>
--->
-</div>
+            </div>
         </div>
-<footer class="footer">
+
+      
+        <footer class="footer">
     <div class="footerText">
         <br/>
         <p class="bottomText"> Powered by Django, Bootstrap and ChartJS</p>
         <p class="bottomText"> Unihack 2017 &copy; CharitySync 2017</p>
      </div>
 </footer>
-    
-</body>
+    </body>
 
 </html>
-
-
-
-
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
-
-
-
