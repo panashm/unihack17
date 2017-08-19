@@ -28,6 +28,9 @@ urlpatterns = [
     url(r'^dashboard/$', views.dashboard, name='dashboard'),
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^accounts/logout/$', views.logout, name='logout'),
+    url(r'^about/$', views.about, name='about'),
+    url(r'^businesses/$', views.businesses, name='businesses'),
+
 
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^accounts/login/$', auth_views.login, name='login'),

@@ -1,8 +1,46 @@
+
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% block title %}Dashboard{% endblock %}
 {% block content %}
-<div id="content" role="main">
-    <p>main user content here</p>
-  
- </div>
+
+	<!--
+User dash Sidebar by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+		<div class="outerCard col-md-9">
+            <div class="dash-content">
+                <h3>Current Tokens</h3>
+                <br/>
+                <table class="tokenCard table borderless">
+
+                  <tbody>
+                    <tr>
+                      <th class="badgeInfo" scope="row">1:badge pic</th>
+                      <td>Random charity</td>
+                    </tr>
+                      
+                  </tbody>
+                </table>
+                <table class="tokenCard table borderless">
+
+                  <tbody>
+                    <tr>
+                      <th class="badgeInfo" scope="row">1:badge pic</th>
+                      <td>Random charity</td>
+                    </tr>
+                      
+                  </tbody>
+                </table>
+			   Some user related content goes here...
+            </div>
+            <br/>
+            <div class="dash-content">
+                <h3>Tokens attained over past Month</h3>
+
+                <p>Graph Goes here</p>
+            </div>
+		</div>
+        
 {% endblock %}

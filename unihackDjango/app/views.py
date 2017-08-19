@@ -15,10 +15,10 @@ def index(request):
 
 @login_required
 def dashboard(request):
-    return render(request, 'index.html', {})
+    return render(request, 'dashboard.html', {})
 
 def discover(request):
-    return render(request, 'index.html', {})
+    return render(request, 'discover.html', {})
 
 def discoverQuery(request, search_string):
     return render(request, 'index.html', {})
@@ -40,6 +40,13 @@ def organisation(request, organisation_id):
 def business(request, business_id):
     bus = Business.objects.get(pk=business_id)
     return render(request, 'business.html', {'business' : bus})
+
+@login_required
+def businesses(request):
+    return render(request, 'businesses.html', {})
+
+def about(request):
+    return render(request, 'about.html', {})
 
 
 def login(request, next_page='login'):
