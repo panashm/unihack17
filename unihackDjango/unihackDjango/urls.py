@@ -18,9 +18,20 @@ from django.contrib import admin
 from app import views
 
 urlpatterns = [
-    url(r'^login/', views.login, name='login'),
-    url(r'^user/', views.user, name='user'),
-    url(r'^organisation/', views.organisation, name='organisation'),
-    url(r'^business/', views.business, name='business'),
+    url(r'^$', views.index, name='index'),
+    url(r'^dashboard/$', views.dashboard, name='dashboard'),
+
+    url(r'^login/$', views.login, name='login'),
+    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^register/$', views.register, name='register'),
+
+    url(r'^discover/$', views.discover, name='discover'),
+    url(r'^discover/s/(\s+)/$', views.discoverQuery, name='discoverQuery'),
+
+    url(r'^badge/([0-9]+)/$', views.badge, name='badge'),
+
+    url(r'^organisation/([0-9]+)/$', views.organisation, name='organisation'),
+    url(r'^business/([0-9]+)$', views.business, name='business'),
+
     url(r'^admin/', admin.site.urls),
 ]
