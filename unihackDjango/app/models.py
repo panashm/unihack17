@@ -30,7 +30,7 @@ class Badge(models.Model):
 
 class Consumer(models.Model):
     user = models.OneToOneField(User)
-    badge = models.ManyToManyField(Badge)
+    badge = models.ManyToManyField(Badge, blank=True)
     image = models.ImageField(upload_to='profile_image', blank=True)
 
     def __str__(self):
