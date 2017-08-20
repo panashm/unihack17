@@ -95,7 +95,16 @@ def business(request, business_id):
 
 @login_required
 def businesses(request):
-    return render(request, 'businesses.html', {})
+
+    businesses = Business.objects.all()
+
+    current_user = request.user
+    isConsumer = Consumer.objects.filter(user=current_user).count()
+    if isConsumer > 0:
+        consumer = Consumer.objects.get(user=current_user)
+        return render(request, 'businesses.html', {'businesses' : businesses, 'consumer' : consumer, 'current_user' : current_user})
+    else:
+        return render(request, 'businesses.html', {'businesses' : businesses, 'consumer' : None, 'current_user' : current_user})
 
 def about(request):
     current_user = request.user
