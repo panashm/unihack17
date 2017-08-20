@@ -10,17 +10,17 @@ A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themefores
 Licensed under MIT
 -->
 		<div class="outerCard col-md-9">
-            
+
             <div class="dash-content">
                 <h3>Current Badges</h3>
                 {% for badge in badges %}
                 <a href="/badge/{{ badge.id }}/"><img src="{{ badge.image.url }}" alt="badge" title="{{ badge.name }}"></a>
 
 				{% endfor %}
-                    
+
                     <br>
                     <br>
-                    <h4>Recently Completed Tasks</h4>
+                    <h4>Recent Completed Contributions</h4>
 
                     <div class="alert alert-success alert-dismissable">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -44,7 +44,7 @@ Licensed under MIT
                 </div>
 
             </div>
-                
+
             </div>
             <!-- Scripts -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -63,15 +63,15 @@ Licensed under MIT
     <script src="{% static 'js/xmjykx.js' %}"></script>
     <script src="{% static 'js/donut.js' %}"></script>
     <script>
-    
+
 </script>
-         
+
             <br/>
              <br/>
 
         </div>
 <script>
-    
+
     data11 = [
   {name: 'Workout', data: {'2013-02-10 00:00:00 -0800': 3, '2013-02-17 00:00:00 -0800': 4}},
   {name: 'Call parents', data: {'2013-02-10 00:00:00 -0800': 5, '2013-02-17 00:00:00 -0800': 3}}
@@ -79,7 +79,7 @@ Licensed under MIT
 
     var ctx = document.getElementById("myChart").getContext('2d');
     var chart = new Chart (ctx, {
-        
+
     // The type of chart we want to create
     type: 'bar',
 
@@ -93,9 +93,9 @@ Licensed under MIT
             data: [11,18,2,4,5,3],
             fillOpacity: .3,
             fill: 'false',
-            
+
         },{
-                  
+
             label: "Conservation",
             backgroundColor: 'rgba(55, 99, 132, 0.3)',
             borderColor: 'rgb(55, 99, 132)',
@@ -104,7 +104,7 @@ Licensed under MIT
             fill: 'false',
 
         },{
-                  
+
             label: "Education",
             backgroundColor: 'rgba(255, 252, 104, 0.3)',
             borderColor: 'rgb(255, 252, 104)',
@@ -113,7 +113,7 @@ Licensed under MIT
             fill: 'false',
 
         },{
-                  
+
             label: "Charity",
             backgroundColor: 'rgba(5, 2, 3, 0.3)',
             borderColor: 'rgb(5, 2, 3)',
@@ -122,7 +122,7 @@ Licensed under MIT
             fill: 'false',
 
         },{
-                  
+
             label: "Open Source",
             backgroundColor: 'rgba(55, 99, 55, 0.3)',
             borderColor: 'rgb(55, 99, 55)',
@@ -150,16 +150,16 @@ Licensed under MIT
         legend: {
             position: 'bottom',
             },
-        
+
         tooltips: {
             mode: 'nearest'
         },
-        
+
         animation: {
             currentStep: '1000',
 
             numSteps: '1000',
-            
+
             duration: 8000,
         },
         scaleOverride: true,
