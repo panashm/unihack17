@@ -30,33 +30,21 @@ Licensed under MIT
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Success!</strong> Recently participated in the cross country initiative.
                     </div>
-                    <div class="chart-wrapper"></div>
-                </div>
-                <br/>
+                    </div>
             <br/>
             <div class="graph2 dash-content">
-                <h3>Badges attained over past month</h3>
+                <h3>Badges attained over past months</h3>
 
                 <div class="row equal">
 
                 <div id="middle">
                     <h1 class="title">Completed Tasks for the Month</h1>
                     <div class="graph"></div>
-                    <div class="myBarChart">
-                    
-                    </div>
+                    <canvas id="myChart" width="600" height="300"></canvas>
                 </div>
 
             </div>
-                <div class="graph2 container">
-  <h1 class="title">Sven's Slaapoverzicht</h1>
-    <div class="legend">
-    <div class="blue bloq">Slaapefficiëntie boven 90%</div>
-    <div class="purple bloq">Slaapefficiëntie tussen 90% en 80%</div>
-    <div class="red bloq">Slaapefficiëntie onder 80%</div>
-  </div>
-  <div class="graph"></div>
-</div>
+                
             </div>
             <!-- Scripts -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
@@ -75,15 +63,112 @@ Licensed under MIT
     <script src="{% static 'js/xmjykx.js' %}"></script>
     <script src="{% static 'js/donut.js' %}"></script>
     <script>
+    
+</script>
+         
+            <br/>
+             <br/>
+
+        </div>
+<script>
+    
+    data11 = [
+  {name: 'Workout', data: {'2013-02-10 00:00:00 -0800': 3, '2013-02-17 00:00:00 -0800': 4}},
+  {name: 'Call parents', data: {'2013-02-10 00:00:00 -0800': 5, '2013-02-17 00:00:00 -0800': 3}}
+];
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var chart = new Chart (ctx, {
         
-        var data=[1,2,3,4,4,1]
-        var myBarChart = new Chart(ctx, {
-            type: 'bar',
-            data: data,
-            options: options
-        });
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ["May","June", "July", "August"],
+        datasets: [{
+            label: "Community",
+            backgroundColor: 'rgba(255, 99, 132, 0.3)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [11,18,2,4,5,3],
+            fillOpacity: .3,
+            fill: 'false',
             
+        },{
+                  
+            label: "Conservation",
+            backgroundColor: 'rgba(55, 99, 132, 0.3)',
+            borderColor: 'rgb(55, 99, 132)',
+            data: [5,11,12,2,19,3],
+            fillOpacity: .3,
+            fill: 'false',
+
+        },{
+                  
+            label: "Education",
+            backgroundColor: 'rgba(255, 252, 104, 0.3)',
+            borderColor: 'rgb(255, 252, 104)',
+            data: [1,5,2,2,11,3],
+            fillOpacity: .3,
+            fill: 'false',
+
+        },{
+                  
+            label: "Charity",
+            backgroundColor: 'rgba(5, 2, 3, 0.3)',
+            borderColor: 'rgb(5, 2, 3)',
+            data: [11,2,5,4,12,3],
+            fillOpacity: .3,
+            fill: 'false',
+
+        },{
+                  
+            label: "Open Source",
+            backgroundColor: 'rgba(55, 99, 55, 0.3)',
+            borderColor: 'rgb(55, 99, 55)',
+            data: [1,2,7,2,8,3],
+            fillOpacity: .3,
+            fill: 'false',
+
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        scales: {
+            yAxes: [{
+                display: true,
+                labelString: 'probability',
+                ticks: {
+                    suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+                    // OR //
+                    beginAtZero: true,   // minimum value will be 0.
+                    max: 20,
+                }
+            }]
+        },
+        legend: {
+            position: 'bottom',
+            },
+        
+        tooltips: {
+            mode: 'nearest'
+        },
+        
+        animation: {
+            currentStep: '1000',
+
+            numSteps: '1000',
+            
+            duration: 8000,
+        },
+        scaleOverride: true,
+        scaleStartValue: 0,
+        scaleSteps: 11,
+        scaleStepWidth: 6910,
+    }
+});
     </script>
-		</div>
+
 
 {% endblock %}
