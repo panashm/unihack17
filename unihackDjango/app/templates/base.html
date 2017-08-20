@@ -26,9 +26,8 @@
 	<link rel="stylesheet" href="% static 'css/flexboxgrid.min.css %}" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
     <link rel="stylesheet" href="{% static 'css/custom1.css' %}" type="text/css">
-
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     {% block head %}
     {% endblock %}
 </head>
@@ -72,12 +71,13 @@
 				<!-- END SIDEBAR USER TITLE -->
 
 				<!-- SIDEBAR MENU -->
+                <br/>
 				<div class="dash-usermenu">
 					<ul class="nav">
 						<li class="">
 							<a href="{% url 'dashboard' %}">
-							<i class="padSide glyphicon glyphicon-home"></i>
-							Overview </a><p></p>
+							<i class="icon fa-th"></i>
+							Dashboard </a><p></p>
 						</li>
 						<li>
 							<a href="{% url 'discover' %}">

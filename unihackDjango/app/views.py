@@ -98,7 +98,13 @@ def businesses(request):
     return render(request, 'businesses.html', {})
 
 def about(request):
-    return render(request, 'about.html', {})
+    current_user = request.user
+    isConsumer = Consumer.objects.filter(user=current_user).count()
+    if isConsumer > 0:
+        consumer = Consumer.objects.get(user=current_user)
+        return render(request, 'about.html', {'consumer' : consumer, 'current_user' : current_user})
+    else:
+        return render(request, 'about.html', {'consumer' : None, 'current_user' : current_user})
 
 
 def login_view(request, onsuccess='/', onfail='/login/'):

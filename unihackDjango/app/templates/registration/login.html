@@ -36,7 +36,11 @@
                 <div class="loginForm center">
                 
                 <form class="form form-signin" method="post" action="{% url 'login' %}" style="text-align: center;">
-                <table class="titleBack table borderless">
+                
+                                        {% csrf_token %}
+
+                    <div class="">
+                        <table class="titleBack table borderless">
 
                   <tbody>
                     <tr>
@@ -47,25 +51,23 @@
                       
                   </tbody>
                 </table>
-                                        {% csrf_token %}
-
-                    <div class="">
+                        <br/>
                     <div class="form-group">
-                      <div class="col-xs-8">
-                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username"/> <br/>
+                      <div class="col-xs-12">
+                        <input type="text" style="color:#eeeeee !important" class="form-control" name="username" id="username" placeholder="Enter Username"/> <br/>
 
                       </div>
                     </div>
                       <br/><br/>
                     <div class="form-group">
-                      <div class="col-xs-8">          
-                        <input type="text" class="form-control" name="password" id="password" placeholder="Enter Password"/>
+                      <div class="col-xs-12">          
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password"/>
                       </div>
                     </div>
                     <br/><br/><br/>
                     <div class="form-group">        
                       <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary">Log in</button>
+                        <button type="submit" class="btn loginBtn btn-primary">Log in</button>
                       </div>
                     </div>
                 </div>

@@ -4,6 +4,8 @@ A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themefores
 Licensed under MIT
 ***/
 
+
+
 .backBusiness {
     height: 400px;
     width: 800px !important;
@@ -20,24 +22,30 @@ Licensed under MIT
     padding-right: 0px;
 }
 
+.loginBtn{
+    font-size: 18px;
+    width: 270px;
+}
+
 .longerDiv {
-    height: 80%;
+    height: 100%;
 }
 
 .loginForm {
     /* Add shadows to create the "card" effect */
-    margin-left:350px ;
-    margin-right: 350px ;
-    margin-top: 200px;
-    margin-bottom: 200px;
-    border-radius: 25px;
-    text-align: center !important;
-    color: white;
-    vertical-align:middle;
-    width: 350px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    background-color: #2c3035;
+   width: 300px;
+        height: 350px;
+        background-color:#565a60 ;
+
+        position:absolute; /*it can be fixed too*/
+        left:0; right:0;
+        top:0; bottom:0;
+        margin:auto;
+        text-align: center !important;
+        /*this to solve "the content will not be cut when the window is smaller than the content": */
+        max-width:100%;
+        max-height:100%;
+        overflow:auto;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -51,6 +59,7 @@ Licensed under MIT
 }
 
 .overallBack {
+    
 }
 
 /* dash container */
@@ -79,7 +88,25 @@ Licensed under MIT
     padding-top: 15px !important;
     padding-right: 10px !important;
     text-align: center;
+    color: white;
     padding-right: 0px !important;
+    font-family: 'Julius Sans One', sans-serif !important;
+    font-weight: 100 !important;
+
+}
+
+input[type="text"], textarea {
+
+    background-color : #444649; 
+    border: none;
+
+}
+
+input[type="password"], textarea {
+
+    background-color : #444649; 
+    border: none;
+
 }
 
 .borderless td, .borderless th {
@@ -94,7 +121,7 @@ Licensed under MIT
 }
 
 .badgeInfo {
-    width: 100px;
+    width: 150px;
     height: 70px;
     padding-left: 8px !important;
     text-align: center;
@@ -107,7 +134,7 @@ Licensed under MIT
 /* dash sidebar */
 .dash-sidebar {
   padding: 0px 0 10px 0;
-  background: #fff;
+  background: #222629;
     height: 100%;
 }
 
@@ -126,12 +153,11 @@ footer {
 .logo {
     padding: 15px;
     padding-left: 5px;
-    background-color: #eeeeee;
 }
 
 .sidebarOuter {
     padding: 0px !important;
-    height: 100%;
+    height: 700px;
 }
 
 .outerCard {
@@ -157,7 +183,7 @@ footer {
 }
 
 .dash-usertitle-name {
-  color: #5a7391;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 7px;
@@ -165,7 +191,7 @@ footer {
 
 .dash-usertitle-job {
   text-transform: uppercase;
-  color: #5b9bd1;
+  color: color:rgba(255, 255, 255, 0.5);
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -194,6 +220,8 @@ footer {
 
 .dash-usermenu ul li {
   border-bottom: none;
+      text-align: left;
+
 }
 
 .dash-usermenu ul li:last-child {
@@ -201,8 +229,8 @@ footer {
 }
 
 .dash-usermenu ul li a {
-  color: #93a3b5;
-  font-size: 17px;
+  color:rgba(255, 255, 255, 0.5);
+  font-size: 17px;		  
   font-weight: 400;
 }
 
@@ -212,8 +240,8 @@ footer {
 }
 
 .dash-usermenu ul li a:hover {
-  background-color: #fafcfd;
-  color: #5b9bd1;
+    background-color: #222629;
+    color: #5b9bd1;
 }
 
 .dash-usermenu ul li.active {
@@ -232,6 +260,7 @@ footer {
 .dash-content {
   padding: 20px;
   background: #fff;
+color: #424242;
   min-height: 460px;
 }
 
@@ -419,3 +448,4 @@ footer {
 .graph2 {
     height: 700px !important;
 }
+

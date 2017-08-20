@@ -10,29 +10,41 @@ A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themefores
 Licensed under MIT
 -->
 		<div class="outerCard col-md-9">
+            
             <div class="dash-content">
-                <h3>Current Tokens</h3>
-                <br/>
-				{% for badge in badges %}
-                <table class="tokenCard table borderless">
-                  <tbody>
-                    <tr>
-                      <th class="badgeInfo" scope="row"><a href="/badge/{{ badge.id }}"><img src="{{ badge.image.url }}" width="50"></a></div>
-                      </th>
-                      <td>{{ badge.name }}</td>
-					  <br>
-					   <td>{{ badge.organisation }}</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <h3>Current Badges</h3>
+                {% for badge in badges %}
+                <a href="/badge/{{ badge.id }}/"><img src="{{ badge.image.url }}" alt="badge" title="{{ badge.name }}"></a>
+
 				{% endfor %}
-			   Some user related content goes here...
-            </div>
+                    
+                    <br>
+                    <br>
+                    <h4>Recently Completed Tasks</h4>
+
+                    <div class="alert alert-success alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Success!</strong> Indicates a successful or positive action.
+                    </div>
+                    <div class="alert alert-success alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Success!</strong> Recently participated in the cross country initiative.
+                    </div>
+                    <div class="chart-wrapper"></div>
+                </div>
+                <br/>
             <br/>
             <div class="graph2 dash-content">
-                <h3>Tokens attained over past Month</h3>
+                <h3>Badges attained over past month</h3>
 
-                <p>Graph Goes here</p>
+                <div class="row equal">
+
+                <div id="middle">
+                    <h1 class="title">Completed Tasks for the Month</h1>
+                    <div class="graph"></div>
+                </div>
+
+            </div>
                 <div class="graph2 container">
   <h1 class="title">Sven's Slaapoverzicht</h1>
     <div class="legend">

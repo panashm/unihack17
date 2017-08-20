@@ -33,6 +33,8 @@
 
 /* Containers */
 
+
+
 /* Grid*/
 
 	.row {
@@ -41,6 +43,7 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
       margin: -40px 0 -1px -40px;
+		color:rgba(255, 255, 255, 0.75) !important;
 	}
 
 	.row > * {
@@ -68,13 +71,17 @@
 
 
 /* Basic */
+img{
+	width: 50px;
+	height: 50px;
+}
 
 	body {
 		background: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #fff;
 	}
 
 
@@ -103,7 +110,8 @@
 
 	h2 {
 		font-size: 2em;
-		letter-spacing: -1px;
+		letter-spacing: ;
+		color: #fff !important;
 	}
 
 	h3 {
@@ -112,6 +120,7 @@
 
 	header {
 		margin: 0 0 2em 0;
+
 	}
 
 	footer {
@@ -207,10 +216,11 @@
 
 	.icon {
 		text-decoration: none;
+
 	}
 
 		.icon:before {
-			display: inline-block;
+			display: inline-flex;
 			font-family: FontAwesome;
 			font-size: 1.25em;
 			text-decoration: none;
@@ -488,6 +498,7 @@
      margin: 0 auto;
      text-align: center;
 
+
    }
    .sleep-good {
      fill: #2de4e3;
@@ -526,26 +537,11 @@
      font-size: 1em;
      margin-bottom: 2.5em;
    }
-   .legend {
-     text-align: center;
-     font-size: 0.85em;
-     letter-spacing: 0.02em;
-     margin-bottom: 40px;
-   }
-   .legend .bloq {
-     display: inline-block;
-     padding: 8px 20px;
-     padding-bottom: 10px;
-   }
-   .legend .bloq + .bloq {
-     margin-left: 4px;
-   }
-   .legend .blue {
-     background-color: #2de4e3;
-   }
-   .legend .purple {
-     background-color: #6f5df6;
-   }
-   .legend .red {
-     background-color: #ff666f;
-   }
+	#chart {
+	  height: 200px;
+	  width: 200px;
+	}
+	img{
+		width: 50px;
+		height: 50px;
+	}
