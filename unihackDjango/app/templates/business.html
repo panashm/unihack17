@@ -23,6 +23,13 @@ Licensed under MIT
                     <p>contact: {{ business.phone }}</p>
                     <p>Address: {{ business.address }}</p>
                     <br/>
+                    <h3>Badges {{business.name}} support</h3>
+                        {% for badge in badges %}
+                        <a href="/badge/{{ badge.id }}/"><img src="{{ badge.image.url }}" alt="badge" title="{{ badge.name }}"></a>
+                    
+                        {% endfor %}
+                    <br/>
+                    <br/>
                     <iframe width="80%" height="450" frameborder="0" style="border:0" src="http://maps.google.com/maps?q={{ business.lat }},{{ business.lng }}&z=15&output=embed"></iframe>
                 {% else %}
                     This business does not exist.

@@ -27,11 +27,11 @@ A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themefores
 Licensed under MIT
 -->
 		<div class="outerCard col-md-9">
-            <div class="dash-content">
-                <h3>Businesses</h3>
-                <br/>
+            
 				{% for business in businesses %}
-					<img class="profileBusiness" src="{{ business.profileImage.url }}" width="240">
+                <div class="dash-content">
+                    <br/>
+                    <a href="/business/{{ business.id }}"><img class="profileBusiness" src="{{ business.profileImage.url }}" width="240"></a>
 					<h3>{{ business.name }}</h3>
 
 					<p>{{ business.description }}</p>
@@ -39,7 +39,11 @@ Licensed under MIT
 
 					<p>contact: {{ business.phone }}</p>
 					<p>Address: {{ business.address }}</p>
+                </div>
+                <br/>
 				{% endfor %}
+            <br/>
+            <div class="dash-content">
 
 				<div id="map"></div>
 				<script>

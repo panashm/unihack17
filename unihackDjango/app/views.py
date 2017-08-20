@@ -84,12 +84,12 @@ def organisation(request, organisation_id):
 def business(request, business_id):
     current_user = request.user
     isConsumer = Consumer.objects.filter(user=current_user).count()
-
     bus = Business.objects.get(pk=business_id)
 
     if isConsumer > 0:
         consumer = Consumer.objects.get(user=current_user)
-        return render(request, 'business.html', {'business' : bus, 'consumer' : consumer, 'current_user' : current_user})
+        badges = consumer.badge.all()
+        return render(request, 'business.html', {'business' : bus, 'consumer' : consumer, 'badges' : badges, 'current_user' : current_user})
     else:
         return render(request, 'business.html', {'business' : bus, 'consumer' : None, 'current_user' : current_user})
 

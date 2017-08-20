@@ -42,6 +42,9 @@ Licensed under MIT
                 <div id="middle">
                     <h1 class="title">Completed Tasks for the Month</h1>
                     <div class="graph"></div>
+                    <div class="myBarChart">
+                    
+                    </div>
                 </div>
 
             </div>
@@ -71,6 +74,16 @@ Licensed under MIT
     <script src="https://codepen.io/Vordez/pen/XmjYKx.js"></script>
     <script src="{% static 'js/xmjykx.js' %}"></script>
     <script src="{% static 'js/donut.js' %}"></script>
+    <script>
+        
+        var data=[1,2,3,4,4,1]
+        var myBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+            
+    </script>
 		</div>
 
 {% endblock %}

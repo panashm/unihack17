@@ -8,7 +8,7 @@ Licensed under MIT
 
 .backBusiness {
     height: 400px;
-    width: 800px !important;
+    width: 1600px !important;
     vertical-align: bottom;
     display: table-cell;
     
@@ -70,6 +70,8 @@ Licensed under MIT
 
 .profileBusiness {
     padding: 15px;
+    width: 240px !important;
+    height: 240px !important;
     vertical-align: bottom;
 }
 
